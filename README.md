@@ -1,34 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Welcome to Click Motto
 
-## Getting Started
+A simple website built on Next.js with tailwind that fetches api from www.pexel.com and showcases dynamically.
 
-First, run the development server:
+## API Reference
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+#### Get items
+
+```http
+  GET https:///api.pexels.com/v1/search?query=${query}&per_page=40
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+| Parameter | Type     | Description                                                    |
+| :-------- | :------- | :------------------------------------------------------------- |
+| `api_key` | `string` | My API key is already exposed. I didn't set it to an env file. |
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The reason for the api key to not kept secured is for you to test it out. Since Pexels doesn't have any valuable information.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Acknowledgements
 
-## Learn More
+Thanks to Pexels for letting me use their api.
 
-To learn more about Next.js, take a look at the following resources:
+- [Pexels](https://www.pexels.com/photo/food-dinner-lunch-meal-4147875)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Color Reference
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+| Color         | Hex                                                              |
+| ------------- | ---------------------------------------------------------------- |
+| Example Color | ![#0a192f](https://via.placeholder.com/10/fdba74?text=+) #fdba74 |
+| Example Color | ![#f8f8f8](https://via.placeholder.com/10/1c1c1c?text=+) #1c1c1c |
+| Example Color | ![#00b48a](https://via.placeholder.com/10/374151?text=+) #374151 |
+| Example Color | ![#00d1a0](https://via.placeholder.com/10/6b7280?text=+) #6b7280 |
 
-## Deploy on Vercel
+## Tech Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Client:** React, Nextjs, Typescript, TailwindCSS, MobX, MobX-react-lite, Slick-carousel,
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Demo
+
+https://click-motto.vercel.app/
