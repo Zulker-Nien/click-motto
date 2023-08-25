@@ -34,7 +34,3 @@ Thanks to Pexels for letting me use their api.
 ## Tech Stack
 
 **Client:** React, Nextjs, Typescript, TailwindCSS, MobX, MobX-react-lite, Slick-carousel,
-
-## Demo
-
-https://click-motto.vercel.app/
