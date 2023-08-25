@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -11,17 +12,19 @@ const Navbar = () => {
       <nav
         className={`${
           toggle &&
-          " bg-[#fff] w-screen h-100 right-0 ease-out duration-200 fixed flex-col py-0 px-0 justify-start"
-        } md:py-4 md:px-5 flex md:justify-between items-center ease-in duration-200`}
+          " bg-[#fff] w-screen h-100 right-0 ease-out duration-200 fixed flex-col py-0 px-0 justify-start z-10"
+        } md:py-4 md:px-10 flex md:justify-between items-center ease-in duration-200`}
       >
         <div className=" py-4 px-5 flex w-screen justify-between md:w-auto md:p-0">
-          <Image
-            width={25}
-            height={25}
-            className={` w-auto hover:scale-25 ease-out duration-300`}
-            src="/click-logo.svg"
-            alt=""
-          />
+          <Link href="/">
+            <Image
+              width={25}
+              height={25}
+              className={` w-auto ease-out duration-300`}
+              src="/click-logo.svg"
+              alt=""
+            />
+          </Link>
           <button
             className="md:hidden "
             onClick={() => {
@@ -98,14 +101,18 @@ const Navbar = () => {
             </li>
           )}
           <li className="flex justify-center items-center border-b-2 md:border-0 h-[5vh] cursor-pointer text-gray-600 hover:text-black ease-out duration-300">
-            <button>Submit Photos</button>
+            <button className="md:border-2 md:py-2 md:px-4 md:border-orange-300 md:rounded-md">
+              Submit Photos
+            </button>
           </li>
-          <li className="hidden md:visible text-gray-600">|</li>
+          <li className="hidden md:block text-gray-600">|</li>
           <li className="flex justify-center items-center border-b-2 md:border-0 h-[5vh] cursor-pointer text-gray-600 hover:text-black ease-out duration-300">
             <button>Login</button>
           </li>
           <li className="flex justify-center items-center border-b-2 md:border-0 h-[5vh] cursor-pointer text-gray-600 hover:text-black ease-out duration-300">
-            <button>Join Free</button>
+            <button className="md:border-2 md:py-2 md:px-4 md:border-orange-300 md:rounded-md md:bg-orange-300">
+              Join Free
+            </button>
           </li>
           <li className="md:hidden flex justify-around items-center mt:80 md:border-0 h-[10vh] cursor-pointer text-gray-600 hover:text-black ease-out duration-300">
             <Image
@@ -155,7 +162,7 @@ const Navbar = () => {
       </nav>
 
       {dropdown && (
-        <div className="hidden md:block h-100 w-[12vw] right-0 mr-52 bg-[#111111] absolute ease-out duration-300">
+        <div className="hidden md:block h-100 w-[12vw] right-0 mr-72 bg-[#111111] absolute ease-out duration-300">
           <ul className="text-[#929292] text-[14px] px-2 py-2 flex-col items-center ease-out duration-300">
             <li className="cursor-pointer hover:bg-[#1C1C1C] hover:text-[#fff] ease-out duration-300">
               About Click Motto
