@@ -22,7 +22,13 @@ const Navbar = () => {
             src="/click-logo.svg"
             alt=""
           />
-          <button className="md:hidden " onClick={() => setToggle(!toggle)}>
+          <button
+            className="md:hidden "
+            onClick={() => {
+              setToggle(!toggle);
+              setDropdown(false);
+            }}
+          >
             {toggle ? (
               <Image
                 width={5}
