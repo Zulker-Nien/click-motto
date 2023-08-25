@@ -17,11 +17,13 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: #000;
+  background: #fff;
+}
+.circle {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%; /* Create circular shape */
+  background-color: #000; /* Circle color */
+  margin-right: 5px; /* Adjust spacing between circles and text */
 }
